@@ -1,0 +1,29 @@
+
+# 1 "delay.c"
+
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.34\include\plib\delays.h"
+void Delay1TCYx(unsigned char);
+
+# 19
+void Delay10TCYx(unsigned char);
+
+# 25
+void Delay100TCYx(unsigned char);
+
+# 31
+void Delay1KTCYx(unsigned char);
+
+# 37
+void Delay10KTCYx(unsigned char);
+
+# 7 "delay.h"
+void delay_ms(long t);
+
+# 5 "delay.c"
+void delay_ms(long t)
+{
+do
+{
+Delay1KTCYx(4);
+} while(--t);
+}
